@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 ChismeLatino VIP - Chismes y Escándalos de Famosos</title>
+    <meta name="description" content="Los chismes más HOT de celebridades latinas. Escándalos, romances secretos, fotos filtradas y drama en tiempo real. ¡No te pierdas nada!">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 50%, #ffa8a8 100%);
+            min-height: 100vh;
+        }
+
+        /* Header con espacio para banner 728x90 */
+        .header {
+            background: linear-gradient(45deg, #e91e63, #ad1457);
+            color: white;
+            padding: 10px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .banner-top {
+            text-align: center;
+            padding: 10px;
+            background: rgba(255,255,255,0.1);
+            margin-bottom: 10px;
+        }
+
+        .banner-placeholder {
+            background: linear-gradient(45deg, #ff4081, #ff6ec7);
+            color: white;
+            padding: 35px;
+            border-radius: 15px;
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            max-width: 728px;
+            margin: 0 auto;
+            animation: neonGlow 2s infinite alternate;
+        }
+
+        @keyframes neonGlow {
+            0% { box-shadow: 0 4px 15px rgba(255,64,129,0.3); }
+            100% { box-shadow: 0 4px 25px rgba(255,64,129,0.8); }
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 25px;
+        }
+
+        .nav-menu a:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Breaking Alert */
+        .breaking-alert {
+            background: linear-gradient(45deg, #ff1744, #ff4569);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            animation: flash 1.5s infinite;
+        }
+
+        @keyframes flash {
+            0%, 50% { opacity: 1; }
+            51%, 100% { opacity: 0.7; }
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 30px;
+        }
+
+        /* Main Content */
+        .main-content {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #e91e63 0%, #ad1457 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+        }
+
+        /* Trending Tabs */
+        .trending-tabs {
+            display: flex;
+            background: #f8f9fa;
+            border-bottom: 1px solid #eee;
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 15px;
+            background: none;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn.active {
+            background: linear-gradient(45deg, #e91e63, #ad1457);
+            color: white;
+        }
+
+        .tab-btn:hover {
+            background: rgba(233,30,99,0.1);
+        }
+
+        /* Viral Content Grid */
+        .viral-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            padding: 30px;
+        }
+
+        .viral-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+        }
+
+        .viral-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+            border-color: #e91e63;
+        }
+
+        .viral-image {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(45deg, #ff4081, #ff6ec7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .scandal-tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #ff1744;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            animation: pulse 2s infinite;
+        }
+
+        .exclusive-tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: linear-gradient(45deg, #ff9800, #f57c00);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .viral-content {
+            padding: 25px;
+        }
+
+        .viral-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: #333;
+            line-height: 1.3;
+        }
+
+        .viral-excerpt {
+            color: #666;
+            margin-bottom: 18px;
+            line-height: 1.6;
+        }
+
+        .viral-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        .reveal-btn {
+            background: linear-gradient(45deg, #e91e63, #ad1457);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .reveal-btn:hover {
+            transform: scale(1.08);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        /* Interactive Poll Section */
+        .poll-section {
+            background: linear-gradient(135deg, #ff4081, #ff6ec7);
+            margin: 25px;
+            padding: 35px;
+            border-radius: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .poll-title {
+            font-size: 1.6rem;
+            margin-bottom: 25px;
+            font-weight: bold;
+        }
+
+        .poll-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .poll-option {
+            background: rgba(255,255,255,0.2);
+            border: 2px solid white;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .poll-option:hover {
+            background: white;
+            color: #e91e63;
+            transform: scale(1.05);
+        }
+
+        /* Content Gate */
+        .content-gate {
+            background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+            border: 3px dashed #ff9800;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 25px;
+            text-align: center;
+            position: relative;
+        }
+
+        .gate-title {
+            font-size: 1.8rem;
+            color: #e65100;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .blurred-preview {
+            background: linear-gradient(45deg, #333, #555);
+            height: 250px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            position: relative;
+            overflow: hidden;
+            filter: blur(3px);
+        }
+
+        .unlock-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .unlock-btn {
+            background: linear-gradient(45deg, #ff9800, #f57c00);
+            color: white;
+            border: none;
+            padding: 18px 35px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .unlock-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+
+        /* Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .sidebar-widget {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+
+        .widget-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 18px;
+            color: #333;
+            border-bottom: 3px solid #e91e63;
+            padding-bottom: 10px;
+        }
+
+        /* Banner 300x250 en sidebar */
+        .banner-sidebar {
+            text-align: center;
+            background: linear-gradient(45deg, #4facfe, #00f2fe);
+            color: white;
+            padding: 125px 20px;
+            border-radius: 15px;
+            font-weight: bold;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Native Ad Spaces */
+        .native-ad {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border: 2px dashed #dee2e6;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 25px 0;
+            text-align: center;
+            color: #666;
+            font-style: italic;
+        }
+
+        /* Social Bar (fixed bottom) */
+        .social-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(45deg, #e91e63, #ad1457);
+            color: white;
+            padding: 18px;
+            text-align: center;
+            z-index: 1000;
+            box-shadow: 0 -3px 15px rgba(0,0,0,0.3);
+        }
+
+        .social-bar-content {
+            background: rgba(255,255,255,0.2);
+            padding: 12px;
+            border-radius: 8px;
+            display: inline-block;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .social-bar-content:hover {
+            background: rgba(255,255,255,0.3);
+            transform: scale(1.05);
+        }
+
+        /* Celebrity List */
+        .celeb-list {
+            list-style: none;
+        }
+
+        .celeb-item {
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .celeb-item:hover {
+            background: rgba(233,30,99,0.05);
+            padding-left: 10px;
+        }
+
+        .celeb-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #e91e63, #ad1457);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .celeb-info {
+            flex: 1;
+        }
+
+        .celeb-name {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .celeb-status {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .hot-indicator {
+            background: #ff1744;
+            color: white;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                padding: 15px;
+            }
+            
+            .nav-menu {
+                display: none;
+            }
+            
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .viral-grid {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+            
+            .poll-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .banner-placeholder {
+                padding: 25px 15px;
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Special Effects */
+        .fire-icon {
+            animation: fireFlicker 1.5s infinite alternate;
+        }
+
+        @keyframes fireFlicker {
+            0% { text-shadow: 0 0 5px #ff4444; }
+            100% { text-shadow: 0 0 20px #ff4444, 0 0 30px #ff4444; }
+        }
+
+        .exclusive-shimmer {
+            background: linear-gradient(45deg, #ffd700, #ffed4a, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 2s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Breaking Alert -->
+    <div class="breaking-alert">
+        🚨 ÚLTIMA HORA: Filtran fotos íntimas de famosa cantante latina - DETALLES ADENTRO 🚨
+    </div>
+
+    <!-- Header with Top Banner -->
+    <header class="header">
+        <div class="banner-top">
+            <div class="banner-placeholder">
+                💎 ESPACIO BANNER 728x90 - ADSTERRA PREMIUM AD
+            </div>
+        </div>
+        <nav class="nav-container">
+            <div class="logo">🔥 ChismeLatino VIP</div>
+            <ul class="nav-menu">
+                <li><a href="#escándalos">Escándalos</a></li>
+                <li><a href="#romances">Romances</a></li>
+                <li><a href="#exclusivas">Exclusivas</a></li>
+                <li><a href="#fotos">Fotos HOT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Main Content -->
+        <main class="main-content">
+            <section class="hero-section">
+                <h1 class="hero-title"><span class="fire-icon">🔥</span> Los Chismes MÁS HOT</h1>
+                <p class="hero-subtitle">Escándalos, romances secretos y drama de famosos</p>
+            </section>
+
+            <!-- Trending Tabs -->
+            <div class="trending-tabs">
+                <button class="tab-btn active" onclick="switchTab('hot')">🔥 LO MÁS HOT</button>
+                <button class="tab-btn" onclick="switchTab('scandal')">💥 ESCÁNDALOS</button>
+                <button class="tab-btn" onclick="switchTab('romance')">💕 ROMANCES</button>
+                <button class="tab-btn" onclick="switchTab('exclusive')">⭐ EXCLUSIVAS</button>
+            </div>
+
+            <!-- Interactive Poll -->
+            <section class="poll-section">
+                <h2 class="poll-title">🗳 ¿Cuál es el ESCÁNDALO del año?</h2>
+                <div class="poll-options">
+                    <button class="poll-option" onclick="triggerVote('shakira')">
+                        🎤 Shakira vs Piqué
+                    </button>
+                    <button class="poll-option" onclick="triggerVote('anuel')">
+                        💍 Anuel AA drama
+                    </button>
+                    <button class="poll-option" onclick="triggerVote('jbalvin')">
+                        🎵 J Balvin polémica
+                    </button>
+                    <button class="poll-option" onclick="triggerVote('karol')">
+                        👸 Karol G secretos
+                    </button>
+                </div>
+                <p style="font-style: italic; opacity: 0.9;">👆 VOTA y descubre los resultados EXCLUSIVOS</p>
+            </section>
+
+            <!-- Content Gate -->
+            <div class="content-gate">
+                <h2 class="gate-title">🚫 CONTENIDO CENSURADO 🚫</h2>
+                <div class="blurred-preview">
+                    <div style="font-size: 5rem; color: white;">📱</div>
+                    <div class="unlock-overlay">🔒 BLOQUEADO</div>
+                </div>
+                <p style="margin-bottom: 20px; font-size: 1.1rem; color: #e65100;">
+                    <strong>Fotos FILTRADAS de famosa actriz en situación comprometedora</strong><br>
+                    <em>Contenido solo para mayores de edad</em>
+                </p>
+                <button class="unlock-btn" onclick="unlockCensored()">VER FOTOS CENSURADAS</button>
+            </div>
+
+            <!-- Native Ad Space -->
+            <div class="native-ad">
+                💄 NATIVE AD: Apps de belleza y dating para latinos
+            </div>
+
+            <!-- Viral Content Grid -->
+            <div class="viral-grid">
+                <article class="viral-card">
+                    <div class="viral-image">
+                        💔
+                        <div class="scandal-tag">EXCLUSIVA</div>
+                    </div>
+                    <div class="viral-content">
+                        <h2 class="viral-title">Shakira ROMPE EL SILENCIO: "Piqué me engañó con mi mejor amiga"</h2>
+                        <p class="viral-excerpt">En una entrevista EXPLOSIVA, la cantante revela detalles íntimos de su separación. Lo que dice sobre Clara Chía te dejará SIN PALABRAS...</p>
+                        <div class="viral-meta">
+                            <span style="color: #ff1744; font-weight: bold;">🔴 VIRAL AHORA</span>
+                            <a href="#" class="reveal-btn">LEER EXCLUSIVA</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="viral-card">
+                    <div class="viral-image">
+                        💸
+                        <div class="exclusive-tag">BOMBA</div>
+                    </div>
+                    <div class="viral-content">
+                        <h2 class="viral-title">Bad Bunny PIERDE MILLONES: El escándalo que nadie vio venir</h2>
+                        <p class="viral-excerpt">Documentos filtrados revelan pérdidas MILLONARIAS del reggaetonero. La razón te va a IMPACTAR. Sus fans están en SHOCK...</p>
+                        <div class="viral-meta">
+                            <span>⏰ Hace 1 hora</span>
+                            <a href="#" class="reveal-btn">VER DOCUMENTOS</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="viral-card">
+                    <div class="viral-image">
+                        💋
+                        <div class="scandal-tag">HOT</div>
+                    </div>
+                    <div class="viral-content">
+                        <h2 class="viral-title">Karol G y Feid CAPTADOS en situación ÍNTIMA: Las fotos que confirman TODO</h2>
+                        <p class="viral-excerpt">Paparazzi logran las imágenes más COMPROMETEDORAS de la pareja. Lo que hacían en privado ahora es PÚBLICO...</p>
+                        <div class="viral-meta">
+                            <span>⏰ Hace 3 horas</span>
+                            <a href="#" class="reveal-btn">VER FOTOS</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="viral-card">
+                    <div class="viral-image">
+                        🤰
+                        <div class="exclusive-tag">EXCLUSIVA</div>
+                    </div>
+                    <div class="viral-content">
+                        <h2 class="viral-title">Anitta EMBARAZADA: El padre NO es quien piensas</h2>
+                        <p class="viral-excerpt">Fuentes cercanas CONFIRMAN el embarazo de la brasileña. La identidad del padre es un SECRETO que va a EXPLOTAR redes...</p>
+                        <div class="viral-meta">
+                            <span>⏰ Hace 5 horas</span>
+                            <a href="#" class="reveal-btn">CONFIRMAR INFO</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="viral-card">
+                    <div class="viral-image">
+                        💀
+                        <div class="scandal-tag">SHOCK</div>
+                    </div>
+                    <div class="viral-content">
+                        <h2 class="viral-title">Maluma en PELIGRO: Amenazas de muerte por romance prohibido</h2>
+                        <p class="viral-excerpt">El cantante colombiano recibe amenazas por su nueva relación. Los detalles del PELIGRO que corre son ESCALOFRIANTES...</p>
+                        <div class="viral-meta">
+                            <span>⏰ Hace 8 horas</span>
+                            <a href="#" class="reveal-btn">LEER AMENAZAS</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="viral-card">
+                    <div class="viral-image">
+                        🍷
+                        <div class="exclusive-tag">VIDEO</div>
+                    </div>
+                    <div class="viral-content">
+                        <h2 class="viral-title">Video FILTRADO: Famosa actriz mexicana en estado DEPLORABLE</h2>
+                        <p class="viral-excerpt">Las imágenes que sus representantes NO quieren que veas. Su estado actual va a ROMPERTE el corazón...</p>
+                        <div class="viral-meta">
+                            <span>⏰ Hace 12 horas</span>
+                            <a href="#" class="reveal-btn">VER VIDEO</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Native Ad Space -->
+            <div class="native-ad">
+                📱 NATIVE AD: Descarga apps de chismes y dating
+            </div>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- Banner 300x250 -->
+            <div class="sidebar-widget">
+                <div class="banner-sidebar">
+                    💄 BANNER 300x250<br>ADSTERRA PREMIUM
+                </div>
+            </div>
+
+            <!-- Trending Celebrities -->
+            <div class="sidebar-widget">
+                <h3 class="widget-title">🔥 Famosos en TENDENCIA</h3>
+                <ul class="celeb-list">
+                    <li class="celeb-item" onclick="triggerCelebClick('shakira')">
+                        <div class="celeb-avatar">S</div>
+                        <div class="celeb-info">
+                            <div class="celeb-name">Shakira</div>
+                            <div class="celeb-status">Nueva polémica con Piqué</div>
+                        </div>
+                        <div class="hot-indicator">HOT</div>
+                    </li>
+                    <li class="celeb-item" onclick="triggerCelebClick('badbunny')">
+                        <div class="celeb-avatar">BB</div>
+                        <div class="celeb-info">
+                            <div class="celeb-name">Bad Bunny</div>
+                            <div class="celeb-status">Romance secreto revelado</div>
+                        </div>
+                        <div class="hot-indicator">VIRAL</div>
+                    </li>
+                    <li class="celeb-item" onclick="triggerCelebClick('karol')">
+                        <div class="celeb-avatar">KG</div>
+                        <div class="celeb-info">
+                            <div class="celeb-name">Karol G</div>
+                            <div class="celeb-status">Fotos íntimas filtradas</div>
+                        </div>
+                        <div class="hot-indicator">🔥</div>
+                    </li>
+                    <li class="celeb-item" onclick="triggerCelebClick('anitta')">
+                        <div class="celeb-avatar">A</div>
+                        <div class="celeb-info">
+                            <div class="celeb-name">Anitta</div>
+                            <div class="celeb-status">Embarazo confirmado</div>
+                        </div>
+                        <div class="hot-indicator">BOMB</div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Native Ad Widget -->
+            <div class="sidebar-widget">
+                <h3 class="widget-title">💕 Para Ti</h3>
+                <div class="native-ad">
+                    NATIVE AD<br>
+                    Dating Apps Latino
+                </div>
+            </div>
+
+            <!-- Quick Polls -->
+            <div class="sidebar-widget">
+                <h3 class="widget-title">🗳 Vota Rápido</h3>
+                <div onclick="quickPoll('team')" style="background: linear-gradient(45deg, #ff4081, #ff6ec7); color: white; padding: 15px; border-radius: 10px; cursor: pointer; margin-bottom: 10px; text-align: center; font-weight: bold;">
+                    ¿Team Shakira o Team Piqué?
+                </div>
+                <div onclick="quickPoll('couple')" style="background: linear-gradient(45deg, #e91e63, #ad1457); color: white; padding: 15px; border-radius: 10px; cursor: pointer; text-align: center; font-weight: bold;">
+                    ¿Mejor pareja latina 2025?
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Social Bar (Fixed Bottom) -->
+    <div class="social-bar">
+        <div class="social-bar-content" onclick="socialBarClick()">
+            💬 ÚNETE AL GRUPO VIP - Chismes EXCLUSIVOS 24/7
+        </div>
+    </div>
+
+    <!-- JavaScript for Maximum Engagement -->
+    <script>
+        // Engagement tracking
+        let userEngagement = 0;
+        let popunderTriggered = false;
+        let contentUnlocked = false;
+
+        // Vote function for polls
+        function triggerVote(option) {
+            userEngagement += 3; // High value action
+            console.log(🗳 Poll vote: ${option} (Engagement: ${userEngagement}));
+            
+            if (!popunderTriggered) {
+                triggerPopunder();
+                popunderTriggered = true;
+            }
+            
+            // Visual feedback
+            const button = event.target;
+            button.style.background = 'white';
+            button.style.color = '#e91e63';
+            button.innerHTML = '✅ ' + button.innerHTML;
+            
+            setTimeout(() => {
+                showVoteResults(option);
+            }, 800);
+        }
+
+        function showVoteResults(option) {
+            const results = {
+                'shakira': 'Shakira vs Piqué ARRASA con 67% de los votos',
+                'anuel': 'Anuel AA causa controversia con 23% de apoyo',
+                'jbalvin': 'J Balvin decepciona con solo 15% de votos',
+                'karol': 'Karol G sorprende con 45% de popularidad'
+            };
+            
+            alert(🎉 RESULTADOS EXCLUSIVOS:\n\n${results[option]}\n\n💎 Únete a nuestro grupo VIP para más encuestas exclusivas);
+        }
+
+        // Unlock censored content
+        function unlockCensored() {
+            userEngagement += 5; // Maximum value action
+            console.log(🔓 Censored content unlocked (Engagement: ${userEngagement}));
+            
+            if (!popunderTriggered) {
+                triggerPopunder();
+                popunderTriggered = true;
+            }
+            
+            const gate = document.querySelector('.content-gate');
+            gate.innerHTML = `
+                <h2 style="color: #28a745; margin-bottom: 20px;">✅ CONTENIDO DESBLOQUEADO</h2>
+                <div style="background: linear-gradient(45deg, #28a745, #20c997); color: white; padding: 30px; border-radius: 15px; margin: 20px 0;">
+                    <h3>🔥 FOTOS EXCLUSIVAS CARGANDO...</h3>
+                    <p>Por políticas de contenido, las imágenes se envían por mensaje privado</p>
+                    <div class="native-ad" style="background: rgba(255,255,255,0.2); margin-top: 15px;">
+                        📱 DESCARGA NUESTRA APP para ver contenido sin censura
+                    </div>
+                </div>
+                <p style="color: #666; font-style: italic;">Revisa tu WhatsApp en los próximos 5 minutos 📱</p>
+            `;
+            
+            contentUnlocked = true;
+        }
+
+        // Celebrity click tracking
+        function triggerCelebClick(celeb) {
+            userEngagement += 2;
+            console.log(⭐ Celebrity clicked: ${celeb} (Engagement: ${userEngagement}));
+            
+            if (userEngagement >= 3 && !popunderTriggered) {
+                triggerPopunder();
+                popunderTriggered = true;
+            }
+            
+            const celebNames = {
+                'shakira': 'Shakira',
+                'badrunny': 'Bad Bunny',
+                'karol': 'Karol G',
+                'anitta': 'Anitta'
+            };
+            
+            alert(🔥 CARGANDO perfil exclusivo de ${celebNames[celeb] || 'la celebridad'}...\n\n💎 Contenido VIP disponible en nuestra app);
+        }
+
+        // Quick polls
+        function quickPoll(type) {
+            userEngagement += 2;
+            console.log(📊 Quick poll: ${type} (Engagement: ${userEngagement}));
+            
+            if (!popunderTriggered && userEngagement >= 2) {
+                triggerPopunder();
+                popunderTriggered = true;
+            }
+            
+            if (type === 'team') {
+                alert('🗳 VOTA:\n\n🔥 Team Shakira: 73%\n💔 Team Piqué: 27%\n\n¡Tu voto cuenta!');
+            } else {
+                alert('💕 RESULTADOS:\n\n1. Karol G & Feid\n2. Anitta & Maluma\n3. Bad Bunny & Kendall\n\n¿Estás de acuerdo?');
+            }
+        }
+
+        // Social bar interaction
+        function socialBarClick() {
+            userEngagement += 3;
+            console.log(💬 Social bar clicked (Engagement: ${userEngagement}));
+            triggerPopunder();
+            alert('🎉 ¡BIENVENIDO AL GRUPO VIP!\n\nRecibe chismes EXCLUSIVOS antes que nadie\n\n📱 Descarga nuestra app para acceso completo');
+        }
+
+        // Tab switching
+        function switchTab(tab) {
+            userEngagement += 0.5;
+            console.log(📑 Tab switched: ${tab});
+            
+            // Update active tab
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Simulate content change
+            setTimeout(() => {
+                alert(🔄 Cargando contenido de ${tab.toUpperCase()}...\n\n📱 Mejores chismes en nuestra app);
+            }, 300);
+        }
+
+        // Popunder trigger
+        function triggerPopunder() {
+            console.log('🚀 POPUNDER TRIGGERED - Maximum revenue event');
+            // Real Adsterra popunder code goes here
+        }
+
+        // Automatic engagement triggers
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track clicks on reveal buttons
+            document.querySelectorAll('.reveal-btn').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    userEngagement += 4; // Very high value
+                    console.log(💥 Reveal button clicked (Engagement: ${userEngagement}));
+                    
+                    if (!popunderTriggered) {
+                        triggerPopunder();
+                        popunderTriggered = true;
+                    }
+                    
+                    const headlines = [
+                        '🔥 EXCLUSIVA: Más detalles en nuestra app VIP',
+                        '💣 BOMBA: Contenido completo solo para suscriptores',
+                        '⚡ SHOCK: Descarga la app para ver TODO'
+                    ];
+                    
+                    alert(headlines[Math.floor(Math.random() * headlines.length)]);
+                });
+            });
+
+            // Auto-trigger breaking news
+            setTimeout(() => {
+                showBreakingPopup();
+            }, 12000); // After 12 seconds
+
+            // Scroll tracking
+            let maxScroll = 0;
+            window.addEventListener('scroll', () => {
+                const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+                if (scrollPercent > maxScroll) {
+                    maxScroll = scrollPercent;
+                    if (maxScroll > 60) {
+                        userEngagement += 1;
+                        console.log(📜 Deep scroll: ${maxScroll}%);
+                    }
+                }
+            });
+
+            // Time tracking
+            let timeOnSite = 0;
+            setInterval(() => {
+                timeOnSite++;
+                if (timeOnSite % 20 === 0) { // Every 20 seconds
+                    userEngagement += 0.5;
+                    console.log(⏱ Time bonus: ${timeOnSite}s);
+                }
+            }, 1000);
+        });
+
+        // Breaking news popup
+        function showBreakingPopup() {
+            const popup = document.createElement('div');
+            popup.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: linear-gradient(45deg, #ff1744, #ff4569);
+                color: white;
+                padding: 30px;
+                border-radius: 20px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+                z-index: 99999;
+                max-width: 400px;
+                text-align: center;
+                animation: popupSlide 0.5s ease;
+            `;
+            
+            popup.innerHTML = `
+                <h3 style="margin-bottom: 15px; font-size: 1.4rem;">🚨 NOTICIA DE ÚLTIMA HORA</h3>
+                <p style="margin-bottom: 20px;">Famosa cantante latina hospitalizada de emergencia. Los detalles te van a IMPACTAR.</p>
+                <button onclick="urgentNewsClick()" style="background: white; color: #ff1744; border: none; padding: 12px 25px; border-radius: 25px; font-weight: bold; cursor: pointer;">
+                    VER DETALLES URGENTES
+                </button>
+                <button onclick="closePopup()" style="background: transparent; color: white; border: 1px solid white; padding: 8px 15px; border-radius: 20px; margin-left: 10px; cursor: pointer;">
+                    Cerrar
+                </button>
+            `;
+            
+            popup.id = 'breakingPopup';
+            document.body.appendChild(popup);
+            
+            // Auto close after 15 seconds
+            setTimeout(() => {
+                if (document.getElementById('breakingPopup')) {
+                    closePopup();
+                }
+            }, 15000);
+        }
+
+        function urgentNewsClick() {
+            userEngagement += 5; // Maximum engagement
+            console.log('🚨 URGENT NEWS CLICKED - Premium revenue event');
+            triggerPopunder();
+            closePopup();
+            alert('💥 EXCLUSIVA COMPLETA en nuestra app\n\n📱 Descarga GRATIS para ver el video completo');
+        }
+
+        function closePopup() {
+            const popup = document.getElementById('breakingPopup');
+            if (popup) {
+                popup.remove();
+            }
+        }
+
+        // CSS for popup animation
+        const popupStyle = document.createElement('style');
+        popupStyle.textContent = `
+            @keyframes popupSlide {
+                from { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
+                to { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+            }
+        `;
+        document.head.appendChild(popupStyle);
+    </script>
+</body>
+</html>
